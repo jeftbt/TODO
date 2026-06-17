@@ -29,7 +29,7 @@ const todoStore = useTodoStore()
           </div>
         </label>
 
-        <button class="bg-red-300 rounded-md p-2 shrink-0" @click="todoStore.removeTodo(todo.id)">
+        <button class="bg-red-300 rounded-md p-2 shrink-0" @click="todoStore.removeTodo(todo.id)" aria-label="Remove todo">
           <LucideTrash class="p-0.5" />
         </button>
       </div>

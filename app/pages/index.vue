@@ -15,10 +15,12 @@ const { newTodo, onSubmit } = useAddTodo()
     </h1>
     <form class="mb-4 flex p-2" @submit.prevent="onSubmit">
       <input v-model="newTodo" class="p-2 border border-gray-300  w-full rounded" placeholder="Add a new todo">
-      <button class="p-2 bg-blue-500 text-white rounded ml-2" type="submit">
+      <button class="p-2 bg-blue-500 text-white rounded ml-2" type="submit" aria-label="Add todo">
         <LucidePlus />
       </button>
     </form>
-    <TodoList />
+    <ClientOnly>
+      <LazyTodoList />
+    </ClientOnly>
   </div>
 </template>
